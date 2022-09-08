@@ -49,20 +49,28 @@ public class Souris {
         System.out.println("Clone d'une souris !");
     }
 
-    public void vieillir() {
+    public int vieillir() {
+
+        _age = _age + 1;
+        if (this._clonee == true) {
+            if (_age > _esperanceVie / 2) {
+                _couleur = "verte";
+            }
+        }
+        return _age;
 
     }
 
     public void evolue() {
-        while (this._age < ESPERANCE_VIE_DEFAUT) {
-            this._age += 1;
+        while (this._age < _esperanceVie) {
+            vieillir();
         }
 
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
+
         String result;
         result = "Une souris " + this._couleur + " ";
 

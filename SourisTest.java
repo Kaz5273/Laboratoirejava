@@ -24,7 +24,18 @@ public class SourisTest {
 
     @Test
     public void sourisClonee() {
+        Souris souris = new Souris(45, "grise");
+        Souris sourisClone = new Souris(souris);
+        assertEquals(souris.get_couleur(), sourisClone.get_couleur());
+        assertEquals(souris.get_poids(), sourisClone.get_poids());
 
+    }
+
+    @Test
+    public void sourisViellir() {
+        Souris sourisVielle = new Souris(10, "verte", 11);
+
+        assertEquals(12, sourisVielle.vieillir());
     }
 
 }
