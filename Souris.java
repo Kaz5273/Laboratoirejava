@@ -7,6 +7,7 @@ public class Souris {
     private int _esperanceVie;
     private boolean _clonee;
     public static final int ESPERANCE_VIE_DEFAUT = 36;
+    static int compteur = 0;
 
     public Souris(int unPoids, int unAge, String uneCouleur, int uneEsperanceVie) {
         this._poids = unPoids;
@@ -14,6 +15,7 @@ public class Souris {
         this._couleur = uneCouleur;
         this._esperanceVie = uneEsperanceVie;
         this._clonee = false;
+        compteur += 1;
 
         System.out.println("Une nouvelle souris !");
 
@@ -81,6 +83,12 @@ public class Souris {
 
         return (result);
 
+    }
+
+    static String compteur() {
+
+        String resultat = "il y a " + compteur + " souris";
+        return resultat;
     }
 
     /////////////// Getter and setter //////////////////
