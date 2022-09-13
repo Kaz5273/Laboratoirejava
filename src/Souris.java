@@ -27,7 +27,7 @@ public class Souris {
         this._age = unAge;
         this._esperanceVie = ESPERANCE_VIE_DEFAUT;
         this._clonee = false;
-
+        compteur += 1;
         System.out.println("Une nouvelle souris !");
     }
 
@@ -37,7 +37,7 @@ public class Souris {
         this._age = 0;
         this._esperanceVie = ESPERANCE_VIE_DEFAUT;
         this._clonee = false;
-
+        compteur += 1;
         System.out.println("Une nouvelle souris !");
     }
 
@@ -47,7 +47,7 @@ public class Souris {
         this._couleur = souris._couleur;
         this._esperanceVie = 4 * (souris._esperanceVie) / 5;
         this._clonee = true;
-
+        compteur += 1;
         System.out.println("Clone d'une souris !");
     }
 
